@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walmart Homepage</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <img class="logo" src="{{ url_for('static', filename='walmart-spark-logo-white-text-and-yellow-spark-on-blue-background.png') }}">
+    <div class="search-bar">
+        <input type="text" placeholder="Search everything at Walmart online and in store">
+        <button>Search</button>
+    </div>
+ 
+        <div class="cart">
+            <img src="{{ url_for('static', filename='shopping-cart.png') }}" alt="Cart">
+            <span>0</span>
+        </div>
+    </div>
+</header>
+<div class="voice-interaction">
+    <button id="micButton" class="mic-button">
+        <img src="{{ url_for('static', filename='microphone.png') }}" alt="Tap to speak">
+    </button>
+    <div id="statusMessage" class="status-message">Press the microphone to start</div> <br> <br>
+    <div class="check-in-container" id="check-in-container"></div>
+</div>
+<h2>Flash Deals</h2>
+<div class="hor">
+<div class="codepen-container">
+  <div class="content-container">
+    <div class="left-container">
+      <div class="triangle-topleft">
+        <div class="back-arrow" id="buy-toaster"></div>
+      </div>
+      <div class="product-image--container">
+        <img class="product-image--featured" id="featured" src="http://ecx.images-amazon.com/images/I/71f3p1o62FL._SX522_.jpg" alt="toaster"/>
+        <ul class="product-image--list">
+          <li class="item-selected"><img src="http://ecx.images-amazon.com/images/I/71f3p1o62FL._SX522_.jpg" class="product-image--item"/></li>
+          <li><img src="http://ecx.images-amazon.com/images/I/71RE0VKOGlL._SX522_.jpg" class="product-image--item"/></li>
+          <li><img src="http://ecx.images-amazon.com/images/I/81ArwBkmXYL._SX522_.jpg" class="product-image--item"/></li>
+          <li><img src="http://ecx.images-amazon.com/images/I/71TUY7pyVWL._SX522_.jpg" class="product-image--item"/></li>
+          <li><img src="http://ecx.images-amazon.com/images/I/71wQlvYuuHL._SX522_.jpg" class="product-image--item"/></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-container">
+      <div>
+        <h1 class="title">Black & Decker</h1>
+        <h2 class="subtitle subtitle-container">TR1278B 2-Slice Toaster</h2>
+        <div>
+          <span class="rating">
+            <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1"/>
+            <label for="rating-input-1-5" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-4" name="rating-input-1"/>
+            <label for="rating-input-1-4" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-3" name="rating-input-1"/>
+            <label for="rating-input-1-3" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-2" name="rating-input-1"/>
+            <label for="rating-input-1-2" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-1" name="rating-input-1"/>
+            <label for="rating-input-1-1" class="rating-star"></label>
+          </span>
+          <span>|</span>
+          <span>
+            <a href="#" class="reviews">
+              232 customer reviews
+            </a>
+          </span>
+        </div>
+      </div>
+      <span>
+        <p>Price: 
+          <span class="emphasize">$19.99</span>
+        </p>
+        <label for="quantity">Quantity:</label>
+        <select name="quantity" class="select-dropdown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+      </span>
+      <div>
+        <h2 class="title">Product Description</h2>
+        <div class="subtitle-container">
+          <span>Size: 1-Pack</span>
+          <span>|</span>
+          <span>Color: Black</span>
+        </div>
+        <p>
+          This Black & Decker toaster allows selection 
+of the perfect toast shade and centers bread for even 
+toasting results. It has easy crumb removal with the 
+drop down crumb tray.
+        </p>
+      </div>
+      <div>
+        <button class="my-btn flex-btn">
+          <span>
+            <img src="https://cdn1.iconfinder.com/data/icons/material-core/20/shopping-cart-128.png" class="cart-icon"/>
+          </span>
+          <span class="btn-text">Add to Cart
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="codepen-container">
+  <div class="content-container">
+    <div class="left-container">
+      <div class="triangle-topleft">
+        <div class="back-arrow" id="buy-toaster"></div>
+      </div>
+      <div class="product-image--container">
+        <img class="product-image--featured" id="featured" src="{{ url_for('static', filename='HP-DeskJet-4152e-All-in-One-Color-Inkjet-Printer-with-3-Months-Instant-Ink-Included-with-HP_9463c809-1ac2-4916-8ef7-c14a0550e02f.7fd766debc0d26d59c8c3c89414861b0.webp') }}" alt="toaster"/>
+        <ul class="product-image--list">
+          <li class="item-selected"><img src="{{ url_for('static', filename='HP-DeskJet-4152e-All-in-One-Color-Inkjet-Printer-with-3-Months-Instant-Ink-Included-with-HP_9463c809-1ac2-4916-8ef7-c14a0550e02f.7fd766debc0d26d59c8c3c89414861b0.webp') }}" class="product-image--item"/></li>
+          <li><img src="{{ url_for('static', filename='HP-DeskJet-4152e-All-in-One-Color-Inkjet-Printer-with-3-Months-Instant-Ink-Included-with-HP_9463c809-1ac2-4916-8ef7-c14a0550e02f.7fd766debc0d26d59c8c3c89414861b0.webp') }}" class="product-image--item"/></li>
+          <li><img src="{{ url_for('static', filename='HP-DeskJet-4152e-All-in-One-Color-Inkjet-Printer-with-3-Months-Instant-Ink-Included-with-HP_9463c809-1ac2-4916-8ef7-c14a0550e02f.7fd766debc0d26d59c8c3c89414861b0.webp') }}" class="product-image--item"/></li>
+          <li><img src="{{ url_for('static', filename='HP-DeskJet-4152e-All-in-One-Color-Inkjet-Printer-with-3-Months-Instant-Ink-Included-with-HP_9463c809-1ac2-4916-8ef7-c14a0550e02f.7fd766debc0d26d59c8c3c89414861b0.webp') }}" class="product-image--item"/></li>
+          <li><img src="{{ url_for('static', filename='HP-DeskJet-4152e-All-in-One-Color-Inkjet-Printer-with-3-Months-Instant-Ink-Included-with-HP_9463c809-1ac2-4916-8ef7-c14a0550e02f.7fd766debc0d26d59c8c3c89414861b0.webp') }}" class="product-image--item"/></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-container">
+      <div>
+        <h1 class="title">HP</h1>
+        <h2 class="subtitle subtitle-container">DeskJet 4152e All-in-One Color Inkjet Printer</h2>
+        <div>
+          <span class="rating">
+            <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1"/>
+            <label for="rating-input-1-5" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-4" name="rating-input-1"/>
+            <label for="rating-input-1-4" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-3" name="rating-input-1"/>
+            <label for="rating-input-1-3" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-2" name="rating-input-1"/>
+            <label for="rating-input-1-2" class="rating-star"></label>
+            <input type="radio" class="rating-input"
+                    id="rating-input-1-1" name="rating-input-1"/>
+            <label for="rating-input-1-1" class="rating-star"></label>
+          </span>
+          <span>|</span>
+          <span>
+            <a href="#" class="reviews">
+              194 customer reviews
+            </a>
+          </span>
+        </div>
+      </div>
+      <span>
+        <p>Price: 
+          <span class="emphasize">$79.99</span>
+        </p>
+        <label for="quantity">Quantity:</label>
+        <select name="quantity" class="select-dropdown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+      </span>
+      <div>
+        <h2 class="title">Product Description</h2>
+        <div class="subtitle-container">
+          <span>Size: 1-Pack</span>
+          <span>|</span>
+          <span>Color: White</span>
+        </div>
+        <p>
+          TThe HP DeskJet 4152e is ideal for home printing of 1-3 users and gives you all the essential features you need—easily print, scan, and copy. It also offers HP+: the smart printing system that keeps you more secure, more productive, and more sustainable than ever.
+          Perfect for home        </p>
+      </div>
+      <div>
+        <button class="my-btn flex-btn">
+          <span>
+            <img src="https://cdn1.iconfinder.com/data/icons/material-core/20/shopping-cart-128.png" class="cart-icon"/>
+          </span>
+          <span class="btn-text">Add to Cart
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2> Featured Items </h2>
+<section class="flash-deals">
+    
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='Kalrin-Over-The-Toilet-Storage-Shelf-4-Tier-Wooden-Bathroom-Organizer-Adjustable-Saver-Space-Rack-with-Toilet-Paper-Holder-White_b7ef8262-4197-4b0d-9809-45c9f3736515.1707e5aac004aaf32deb24f2b69b5679.webp') }}" class="product-image">
+        <div class="heart-icon">♥</div>
+        <div class="price">
+          <span class="sale-price">Now $49.99</span>
+          <span class="original-price">$129.99</span>
+        </div>
+        <div class="product-name">Kalrin Over The Toilet Storage Shelf, 4-Tier Wooden...</div>
+        <button class="options-button">Options</button>
+      </div>
+
+<div class="container">
+    <img src="{{ url_for('static', filename='Better-Homes-Gardens-3-Piece-Ivory-White-Crinkled-Gauze-Duvet-Set-Adult-Full-Queen_bfc19a85-c64e-4c99-abfd-91b9895b78e1.9069ae82cee30c9a5c7fa346aeb1d023.webp') }}" class="product-image">
+    <div class="heart-icon">♥</div>
+    <div class="price">
+      <span class="sale-price">Now $69.99</span>
+      <span class="original-price">$159.99</span>
+    </div>
+    <div class="product-name">Better Homes Gardens 3-Piece-Ivory..</div>
+    <button class="options-button">Options</button>
+  </div>
+ 
+  <div class="container">
+    <img src="{{ url_for('static', filename='Better-Homes-Gardens-Springwood-Dining-Table-Light-Honey_9f40d77e-8688-4a55-8e35-69a1790d8079.d4ccb3c8c649cd219543cb7b20cb0ed7.jpeg')}}" class="product-image">
+    <div class="heart-icon">♥</div>
+    <div class="price">
+      <span class="sale-price">Now $79.99</span>
+      <span class="original-price">$229.99</span>
+    </div>
+    <div class="product-name">Better Home Gardens Springwood Dining Table Light...</div>
+    <button class="options-button">Options</button>
+  </div>
+
+  <div class="container">
+    <img src="{{ url_for('static', filename='Carote-Nonstick-Cookware-Sets-with-Detachable-Handle-5-Pcs-Granite-Non-Stick-Pots-and-Pans-Set-with-Removable-Handle-Cookware_efcaa2bc-1cc9-4a50-8fa4-610533adada6.f2d58dddc2ceff9fec655745eb223683.webp')}}" class="product-image">
+    <div class="heart-icon">♥</div>
+    <div class="price">
+      <span class="sale-price">Now $49.99</span>
+      <span class="original-price">$129.99</span>
+    </div>
+    <div class="product-name">Carote Nonstick Cookware Sets with Detachable...</div>
+    <button class="options-button">Options</button>
+  </div>
+ 
+  <div class="container">
+    <img src="{{ url_for('static', filename='Restored-Apple-iPhone-12-Pro-Max-Carrier-Unlocked-128GB-Graphite-Refurbished_68788852-aa8c-4800-883e-6c81857ec608.0f6f988bbec50b5d34415cc2166c7d0b.webp')}}" class="product-image">
+    <div class="heart-icon">♥</div>
+    <div class="price">
+      <span class="sale-price">Now $799.99</span>
+      <span class="original-price">$1129.99</span>
+    </div>
+    <div class="product-name">Restored Apple iPhone 12 Pro Max Carrier Unlocked...</div>
+    <button class="options-button">Options</button>
+  </div>
+  
+
+</section>
+
+
+
+<footer class="footer">
+    2024 Walmart. All Rights Reserved. 
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
